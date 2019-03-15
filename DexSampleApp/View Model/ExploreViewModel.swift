@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol SectionNavigationHandler{
-    func handleUrlAction(urlString:String,title:String)
+    func handleAction(sectionType:SectionType,entity:Entities,title:String)
 }
 
 

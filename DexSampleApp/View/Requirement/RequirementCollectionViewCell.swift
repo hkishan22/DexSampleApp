@@ -10,6 +10,10 @@ import UIKit
 
 class RequirementCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lblRequirement:   UILabel!
+    @IBOutlet weak var lblLocation:   UILabel!
+    @IBOutlet weak var imageViewDexBG:   UIImageView!
+
     static func cellNib() -> UINib {
         let nib = UINib.init(nibName: "RequirementCollectionViewCell", bundle: nil)
         return nib

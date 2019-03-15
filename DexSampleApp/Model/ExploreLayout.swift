@@ -86,7 +86,7 @@ class  RequirementEntities:Entities {
         self._id = Json["_id"].string
         self.name = Json["name"].string
         self.slug = Json["slug"].string
-        self._dex = DexEntites.init(with: Json["_dex"])
+        self._dex = DexEntites.init(with: Json["dex"])
         self.creator = UserEntities.init(with: Json["creator"])
     }
 }

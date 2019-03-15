@@ -10,6 +10,10 @@ import UIKit
 
 class DexCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var lblTitle:   UILabel!
+    @IBOutlet weak var imageViewDexBG:   UIImageView!
+
+    
     static func cellNib() -> UINib {
         let nib = UINib.init(nibName: "DexCollectionViewCell", bundle: nil)
         return nib

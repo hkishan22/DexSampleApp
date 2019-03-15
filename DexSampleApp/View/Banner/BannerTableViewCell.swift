@@ -69,8 +69,8 @@ class BannerTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let entity = self.sectionLayout?.entities[indexPath.item] as? BannerEntities, let actionUrlString = entity.actionUrl  {
-            self.sectionNavHandler?.handleUrlAction(urlString: actionUrlString,title:"Banner")
+        if let entity = self.sectionLayout?.entities[indexPath.item] as? BannerEntities  {
+            self.sectionNavHandler?.handleAction(sectionType:.Banner,entity: entity, title: "Banner")
         }
     }
     

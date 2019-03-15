@@ -109,7 +109,16 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
         return UITableView.automaticDimension
     }
     
-    func handleUrlAction(urlString: String,title:String) {
-        NavigationHelper.redirectToWebPageWIthURL(urlString: urlString, presentFrom: self,title:title)
+    // Function to handle Section Action
+    func handleAction(sectionType:SectionType,entity: Entities, title: String) {
+        if sectionType == .Banner {
+            if let entity = entity as? BannerEntities, let urlString = entity.actionUrl {
+                NavigationHelper.redirectToWebPageWIthURL(urlString: urlString, presentFrom: self,title:title)
+            }
+        }else if sectionType == .Dex {
+            if let entity = entity as? DexEntites, let dexID = entity._id {
+                NavigationHelper.redirectToDexUser(dexId: dexID, presentFrom: self, title: title)
+            }
+        }
     }
 }

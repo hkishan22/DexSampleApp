@@ -17,4 +17,8 @@ class NavigationHelper {
         presentFrom.navigationController?.navigationBar.topItem?.title = ""
         presentFrom.navigationController?.pushViewController(webviewVC, animated: true)
     }
+    
+    static func redirectToDexUser(dexId:String, presentFrom:UIViewController,title:String? = nil){
+
+    }
 }

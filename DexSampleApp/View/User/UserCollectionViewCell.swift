@@ -15,7 +15,7 @@ class UserCollectionViewCell: UICollectionViewCell {
         return nib
     }
     
-    static let cellReuseIdentifier = "UserCollectisdonViewCell"
+    static let cellReuseIdentifier = "UserCollectionViewCell"
 
     @IBOutlet weak var lblFirstName:    UILabel!
     @IBOutlet weak var lblLastName:     UILabel!
