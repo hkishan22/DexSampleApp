@@ -8,9 +8,10 @@ target 'DexSampleApp' do
   # Pods for DexSampleApp
     pod 'SDWebImage'
     pod 'SwiftyJSON'
-    pod 'Alamofire'
   target 'DexSampleAppTests' do
     inherit! :search_paths
+    pod 'SDWebImage'
+    pod 'SwiftyJSON'
     # Pods for testing
   end
 
