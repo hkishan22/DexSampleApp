@@ -95,16 +95,15 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
             let sectionLayout = self.viewModel.sectionLayouts[indexPath.section]
             switch sectionLayout.type {
             case .Requirement:
-                return 110.0
-
+                return UIScreen.main.bounds.width / 2.0
             case .Banner:
                 return UIScreen.main.bounds.width / 2.5
             case .User:
-                return 110.0
+                return UIScreen.main.bounds.width / 2.5
             case .Dex:
-                return 110.0
+                return UIScreen.main.bounds.width / 2.5
             case .Unknown:
-                return 110.0
+                return UITableView.automaticDimension
             }
         }
         return UITableView.automaticDimension

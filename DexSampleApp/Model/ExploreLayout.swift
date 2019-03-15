@@ -128,7 +128,7 @@ class UserEntities:Entities {
     var lastName:           String?
     var handle:             String?
     var imageUrl:           String?
-    var totalProjectClaps:  String?
+    var totalProjectClaps:  Int?
     
     override init(with Json:JSON) {
         super.init(with: Json)
@@ -136,7 +136,7 @@ class UserEntities:Entities {
         self.firstName = Json["firstName"].string
         self.lastName = Json["lastName"].string
         self.handle = Json["handle"].string
-        self.totalProjectClaps = Json["totalProjectClaps"].string
+        self.totalProjectClaps = Json["totalProjectClaps"].int
         self.imageUrl = Json["imageUrl"].string
     }
 
