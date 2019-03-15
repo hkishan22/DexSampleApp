@@ -20,13 +20,11 @@ class UserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblFirstName:    UILabel!
     @IBOutlet weak var lblLastName:     UILabel!
     @IBOutlet weak var lblClapsCount:   UILabel!
-    @IBOutlet weak var imageViewUser:   UIImageView!
+    @IBOutlet weak var imageViewUser:   RoundImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.imageViewUser.layer.cornerRadius = self.imageViewUser.bounds.width/2
-        self.imageViewUser.layer.masksToBounds =  true
     }
 
 }

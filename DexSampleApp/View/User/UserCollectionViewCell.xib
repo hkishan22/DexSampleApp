@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="213" height="158"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b9j-br-BOC">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b9j-br-BOC" customClass="RoundImageView" customModule="DexSampleApp" customModuleProvider="target">
                         <rect key="frame" x="82.5" y="20" width="48" height="48.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="b9j-br-BOC" secondAttribute="height" multiplier="1:1" id="lec-lC-41J"/>
@@ -69,7 +69,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="213" height="158"/>
             <connections>
-                <outlet property="imageViewUser" destination="b9j-br-BOC" id="YUO-sg-3Gl"/>
+                <outlet property="imageViewUser" destination="b9j-br-BOC" id="mVp-Js-vrK"/>
                 <outlet property="lblClapsCount" destination="vo2-EB-3qg" id="HRL-tz-fmS"/>
                 <outlet property="lblFirstName" destination="dRQ-ZY-alI" id="jhj-u3-jQM"/>
                 <outlet property="lblLastName" destination="MMb-YU-fxC" id="lEI-cH-hwQ"/>

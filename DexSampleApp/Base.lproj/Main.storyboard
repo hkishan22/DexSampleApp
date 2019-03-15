@@ -9,6 +9,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Dex User View Controller-->
+        <scene sceneID="Kg9-sF-I4e">
+            <objects>
+                <viewController storyboardIdentifier="DexUserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EUO-Cq-Qne" customClass="DexUserViewController" customModule="DexSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Gu-Yb-LAE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bFn-qs-AJw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="EUO-Cq-Qne" id="XD0-1o-4gZ"/>
+                                    <outlet property="delegate" destination="EUO-Cq-Qne" id="JA8-BE-6CL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bFn-qs-AJw" firstAttribute="leading" secondItem="836-ro-uNa" secondAttribute="leading" id="3WD-kT-jhY"/>
+                            <constraint firstItem="bFn-qs-AJw" firstAttribute="top" secondItem="836-ro-uNa" secondAttribute="top" id="4w9-Gs-Xbs"/>
+                            <constraint firstItem="836-ro-uNa" firstAttribute="bottom" secondItem="bFn-qs-AJw" secondAttribute="bottom" id="78z-kh-aIW"/>
+                            <constraint firstItem="836-ro-uNa" firstAttribute="trailing" secondItem="bFn-qs-AJw" secondAttribute="trailing" id="rbW-1H-bcN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="836-ro-uNa"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bFn-qs-AJw" id="Daf-cM-hmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UJV-4c-MrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2092" y="-564"/>
+        </scene>
         <!--Explore View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>

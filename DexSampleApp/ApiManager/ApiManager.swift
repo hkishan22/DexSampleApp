@@ -41,10 +41,6 @@ class APIManager: NSObject {
 
         // Later On URL Session can be replaced by Alamofire or other HTTP Librarary
         URLSession.shared.dataTask(with: request) { (data, resp, err) in
-            if let response = resp {
-                print(response)
-            }
-
             if let error =  err {
                 completion(nil,error)
             }else if let data = data {

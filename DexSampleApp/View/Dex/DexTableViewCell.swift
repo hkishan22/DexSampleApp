@@ -51,7 +51,7 @@ class DexTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DexCollectionViewCell.cellReuseIdentifier, for: indexPath) as! DexCollectionViewCell
-        if let entity = self.sectionLayout?.entities[indexPath.item] as? DexEntites  {
+        if let entities = self.sectionLayout?.entities, entities.count > indexPath.item, let entity = self.sectionLayout?.entities[indexPath.item] as? DexEntites{
             cell.lblTitle.text = entity.userTerm
             cell.imageViewDexBG.sd_setImage(with: URL(string: entity.imageUrl ?? ""), placeholderImage: nil)
         }

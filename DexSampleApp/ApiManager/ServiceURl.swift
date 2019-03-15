@@ -12,7 +12,7 @@ var kBaseUrl = "https://valakt.dextra.com"
 
 struct ServiceURl {
     static let  exploreUri = "/explore"
-    static func dexUserUri(dexID:Int)->String{
+    static func dexUserUri(dexID:String)->String{
         return  "/explore/user?dexId=\(dexID)"
     }
 }

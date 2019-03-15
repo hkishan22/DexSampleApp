@@ -18,6 +18,9 @@ class ExploreViewModel: NSObject {
 
     var sectionLayouts = [ExploreSection]()
     
+    //var sectionLayouts = [SectionViewModel]()
+
+    
     func fetchSections(completion:@escaping ()->()){
         let service = ExploreServices()
         service.getAllSections(completion: { layouts in
@@ -26,8 +29,14 @@ class ExploreViewModel: NSObject {
                 completion()
             }
         }) { (error) in
+            //Handle Error Here
         }
     }
+}
+
+
+struct SectionViewModel {
+
 }
 
 

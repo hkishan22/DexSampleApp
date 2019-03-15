@@ -23,7 +23,6 @@ class ExploreServices {
             if let data = data {
                 do {
                     let JsonResponse = try JSON(data: data)
-                    print(JsonResponse)
                     if let section_instances = JsonResponse["explore"].array {
                         for section in section_instances {
                             let layout  =  ExploreSection.init(with: section)

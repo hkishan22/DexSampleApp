@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8412DDAA223C212B00D3930E /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDA9223C212B00D3930E /* RoundImageView.swift */; };
+		8412DDAC223C236400D3930E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAB223C236400D3930E /* User.swift */; };
+		8412DDAE223C25A200D3930E /* DexUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAD223C25A200D3930E /* DexUsersService.swift */; };
 		841B156C223B8F470033A27F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156B223B8F470033A27F /* AppDelegate.swift */; };
 		841B156E223B8F470033A27F /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156D223B8F470033A27F /* ExploreViewController.swift */; };
 		841B1571223B8F470033A27F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841B156F223B8F470033A27F /* Main.storyboard */; };
@@ -39,6 +42,10 @@
 		841B15C6223BF5AD0033A27F /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15C4223BF5AD0033A27F /* UserCollectionViewCell.xib */; };
 		841B15C9223BF5BC0033A27F /* RequirementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15C7223BF5BC0033A27F /* RequirementCollectionViewCell.swift */; };
 		841B15CA223BF5BC0033A27F /* RequirementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15C8223BF5BC0033A27F /* RequirementCollectionViewCell.xib */; };
+		841B15D6223C15C00033A27F /* DexUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15D5223C15C00033A27F /* DexUserViewController.swift */; };
+		841B15D8223C15E20033A27F /* DexUserVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15D7223C15E20033A27F /* DexUserVCViewModel.swift */; };
+		841B15DB223C16240033A27F /* DexUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15D9223C16240033A27F /* DexUserTableViewCell.swift */; };
+		841B15DC223C16240033A27F /* DexUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15DA223C16240033A27F /* DexUserTableViewCell.xib */; };
 		8676527BEB2602775F400342 /* Pods_DexSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59905F4C207A53E5F6C36922 /* Pods_DexSampleAppTests.framework */; };
 		F403792FDBD06DA8A6EA1836 /* Pods_DexSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F6148169ABEEE36DC4FDEB /* Pods_DexSampleApp.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +63,9 @@
 /* Begin PBXFileReference section */
 		19892631E6EF427662350C2A /* Pods-DexSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DexSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DexSampleApp/Pods-DexSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		59905F4C207A53E5F6C36922 /* Pods_DexSampleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DexSampleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8412DDA9223C212B00D3930E /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		8412DDAB223C236400D3930E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8412DDAD223C25A200D3930E /* DexUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexUsersService.swift; sourceTree = "<group>"; };
 		841B1568223B8F470033A27F /* DexSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DexSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841B156B223B8F470033A27F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841B156D223B8F470033A27F /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +102,10 @@
 		841B15C4223BF5AD0033A27F /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		841B15C7223BF5BC0033A27F /* RequirementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequirementCollectionViewCell.swift; sourceTree = "<group>"; };
 		841B15C8223BF5BC0033A27F /* RequirementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequirementCollectionViewCell.xib; sourceTree = "<group>"; };
+		841B15D5223C15C00033A27F /* DexUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexUserViewController.swift; sourceTree = "<group>"; };
+		841B15D7223C15E20033A27F /* DexUserVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexUserVCViewModel.swift; sourceTree = "<group>"; };
+		841B15D9223C16240033A27F /* DexUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexUserTableViewCell.swift; sourceTree = "<group>"; };
+		841B15DA223C16240033A27F /* DexUserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DexUserTableViewCell.xib; sourceTree = "<group>"; };
 		9B9AA6F18235737F9DF9997D /* Pods-DexSampleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DexSampleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DexSampleAppTests/Pods-DexSampleAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D0916BD54594356DF7917F6 /* Pods-DexSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DexSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DexSampleApp/Pods-DexSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		B0F6148169ABEEE36DC4FDEB /* Pods_DexSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DexSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +170,7 @@
 				841B1596223BB9820033A27F /* View Model */,
 				841B1591223B96830033A27F /* Model */,
 				841B1590223B965D0033A27F /* Service */,
-				841B15BC223BED6A0033A27F /* Navigaton Helper */,
+				841B15BC223BED6A0033A27F /* Navigation Helper */,
 				841B158B223B902F0033A27F /* ApiManager */,
 				841B156F223B8F470033A27F /* Main.storyboard */,
 				841B1572223B8F480033A27F /* Assets.xcassets */,
@@ -188,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				841B1594223BB1660033A27F /* ExploreServices.swift */,
+				8412DDAD223C25A200D3930E /* DexUsersService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -196,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				841B1592223B97700033A27F /* ExploreLayout.swift */,
+				8412DDAB223C236400D3930E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				841B1597223BB9A30033A27F /* ExploreViewModel.swift */,
+				841B15D7223C15E20033A27F /* DexUserVCViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -213,6 +230,7 @@
 			children = (
 				841B156D223B8F470033A27F /* ExploreViewController.swift */,
 				841B15BA223BE9F10033A27F /* WebViewViewController.swift */,
+				841B15D5223C15C00033A27F /* DexUserViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +265,9 @@
 				841B15A0223BBF0F0033A27F /* UserTableViewCell.xib */,
 				841B15C3223BF5AD0033A27F /* UserCollectionViewCell.swift */,
 				841B15C4223BF5AD0033A27F /* UserCollectionViewCell.xib */,
+				841B15D9223C16240033A27F /* DexUserTableViewCell.swift */,
+				841B15DA223C16240033A27F /* DexUserTableViewCell.xib */,
+				8412DDA9223C212B00D3930E /* RoundImageView.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -283,12 +304,12 @@
 			path = "Section Title";
 			sourceTree = "<group>";
 		};
-		841B15BC223BED6A0033A27F /* Navigaton Helper */ = {
+		841B15BC223BED6A0033A27F /* Navigation Helper */ = {
 			isa = PBXGroup;
 			children = (
 				841B15BD223BED8A0033A27F /* NavigationHelper.swift */,
 			);
-			path = "Navigaton Helper";
+			path = "Navigation Helper";
 			sourceTree = "<group>";
 		};
 		997F73E1FD686F2BCDD4F618 /* Pods */ = {
@@ -390,6 +411,7 @@
 				841B1576223B8F480033A27F /* LaunchScreen.storyboard in Resources */,
 				841B159E223BBEFA0033A27F /* DexTableViewCell.xib in Resources */,
 				841B1573223B8F480033A27F /* Assets.xcassets in Resources */,
+				841B15DC223C16240033A27F /* DexUserTableViewCell.xib in Resources */,
 				841B1571223B8F470033A27F /* Main.storyboard in Resources */,
 				841B15A2223BBF0F0033A27F /* UserTableViewCell.xib in Resources */,
 				841B15CA223BF5BC0033A27F /* RequirementCollectionViewCell.xib in Resources */,
@@ -481,10 +503,12 @@
 				841B15A9223BBF320033A27F /* BannerTableViewCell.swift in Sources */,
 				841B1593223B97700033A27F /* ExploreLayout.swift in Sources */,
 				841B15A1223BBF0F0033A27F /* UserTableViewCell.swift in Sources */,
+				841B15D6223C15C00033A27F /* DexUserViewController.swift in Sources */,
 				841B1595223BB1660033A27F /* ExploreServices.swift in Sources */,
 				841B15B6223BE60C0033A27F /* BannerCollectionViewCell.swift in Sources */,
 				841B15A5223BBF1E0033A27F /* RequirementTableViewCell.swift in Sources */,
 				841B15C9223BF5BC0033A27F /* RequirementCollectionViewCell.swift in Sources */,
+				8412DDAA223C212B00D3930E /* RoundImageView.swift in Sources */,
 				841B156E223B8F470033A27F /* ExploreViewController.swift in Sources */,
 				841B15C1223BF2930033A27F /* DexCollectionViewCell.swift in Sources */,
 				841B15B9223BE8070033A27F /* CenteredCollectionViewFlowLayout.swift in Sources */,
@@ -493,7 +517,11 @@
 				841B156C223B8F470033A27F /* AppDelegate.swift in Sources */,
 				841B159D223BBEFA0033A27F /* DexTableViewCell.swift in Sources */,
 				841B15C5223BF5AD0033A27F /* UserCollectionViewCell.swift in Sources */,
+				841B15DB223C16240033A27F /* DexUserTableViewCell.swift in Sources */,
+				8412DDAC223C236400D3930E /* User.swift in Sources */,
+				8412DDAE223C25A200D3930E /* DexUsersService.swift in Sources */,
 				841B158F223B945F0033A27F /* ServiceURl.swift in Sources */,
+				841B15D8223C15E20033A27F /* DexUserVCViewModel.swift in Sources */,
 				841B1598223BB9A30033A27F /* ExploreViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

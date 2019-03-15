@@ -66,6 +66,7 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
 
             case .Dex:
                 let cell = tableView.dequeueReusableCell(withIdentifier: DexTableViewCell.cellReuseIdentifier, for: indexPath) as! DexTableViewCell
+                cell.sectionNavHandler = self
                 cell.sectionLayout = sectionLayout
                 return cell
 
