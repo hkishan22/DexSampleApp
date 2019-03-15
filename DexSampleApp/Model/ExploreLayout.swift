@@ -26,7 +26,7 @@ enum SectionRefreshStatus {
     case loadingFailed
 }
 
-struct ExploreSection {
+class ExploreSection {
     var type: SectionType = .Unknown
     var sectionRefreshStatus : SectionRefreshStatus = .notLoading
     var entities = [Entities]()
@@ -36,38 +36,39 @@ struct ExploreSection {
     }
 }
 
-protocol Entities:Codable {
+class Entities {
+
 }
 
-protocol  RequirementEntiries:Entities {
-    var _id:                String {get set}
-    var name:               String {get set}
-    var slug:               String {get set}
-    var _dex:               DexEntites {get set}
-    var creator:            UserEntities {get set}
+
+class  RequirementEntiries:Entities {
+    var _id:                String?
+    var name:               String?
+    var slug:               String?
+    var _dex:               DexEntites?
+    var creator:            UserEntities?
 }
 
-protocol BannerEntities:Entities {
-    var imageUrl:           String {get set}
-    var actionUrl:          String {get set}
+class BannerEntities:Entities {
+    var imageUrl:           String?
+    var actionUrl:          String?
 }
 
-protocol DexEntites:Entities {
-    var _id:                String {get set}
-    var name:               String {get set}
-    var userTerm:           String {get set}
-    var imageRatio:         Double {get set}
-    var imageUrl:           String {get set}
-    var userTermSlug:       String {get set}
+class DexEntites:Entities {
+    var _id:                String?
+    var name:               String?
+    var userTerm:           String?
+    var imageRatio:         Double?
+    var imageUrl:           String?
+    var userTermSlug:       String?
 }
 
-protocol UserEntities:Entities {
-    var _id:                String {get set}
-    var firstName:          String {get set}
-    var lastName:           String {get set}
-    var handle:             String {get set}
-    var imageUrl:           String {get set}
-    var totalProjectClaps:  String {get set}
+class UserEntities:Entities {
+    var _id:                String?
+    var firstName:          String?
+    var lastName:           String?
+    var handle:             String?
+    var imageUrl:           String?
+    var totalProjectClaps:  String?
 }
-
 
