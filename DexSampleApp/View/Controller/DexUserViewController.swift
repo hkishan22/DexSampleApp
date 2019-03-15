@@ -10,25 +10,29 @@ import UIKit
 
 class DexUserViewController: UIViewController {
     
+    
+    static func dexUserViewController(viewModel:DexUserVCViewModel)->DexUserViewController{
+        let dexUserVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DexUserViewController") as! DexUserViewController
+        dexUserVC.viewModel = viewModel
+        return dexUserVC
+    }
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel = DexUserVCViewModel()
-    var str_viewControllerTitle : String?
-    var str_dexID : String?
+    private var viewModel = DexUserVCViewModel(dexID: nil)
     static fileprivate let rowsToLoadFromBottom = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Dex User"
         self.registerCells()
-        if let dexID = self.str_dexID {
-            self.fetchUsers(dexID: dexID)
-        }
+        self.fetchUsers()
         // Do any additional setup after loading the view.
     }
     
-    private func fetchUsers(dexID:String){
-        self.viewModel.fetchUsers(dexID: dexID) {
+    private func fetchUsers(){
+        self.viewModel.fetchUsers() {
             self.tableView.reloadData()
         }
     }
@@ -70,8 +74,8 @@ extension DexUserViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // See if we need to load more Users
         let thisItemIndex = indexPath.row
-        if let nextDexId = self.viewModel.nextDexId, (thisItemIndex + type(of: self).rowsToLoadFromBottom) >= self.viewModel.users.count{
-            self.fetchUsers(dexID: nextDexId)
+        if  (thisItemIndex + type(of: self).rowsToLoadFromBottom) >= self.viewModel.users.count{
+            self.fetchUsers()
         }
     }
 }

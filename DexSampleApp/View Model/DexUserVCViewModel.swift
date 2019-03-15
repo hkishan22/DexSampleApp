@@ -12,10 +12,17 @@ import UIKit
 class DexUserVCViewModel {
  
     var users = [DexUserViewModel]()
-    var hasNext = false
-    var nextDexId : String?
+    private var nextDexId : String?
     
-    func fetchUsers(dexID:String, completion:@escaping ()->()){
+    init(dexID:String?) {
+        self.nextDexId = dexID
+    }
+    
+    func fetchUsers( completion:@escaping ()->()){
+        guard let dexID = self.nextDexId else{
+            return
+        }
+        
         let dexuserService = DexUsersService()
         dexuserService.getDexUsers(dexID: dexID, completion: { [weak self](users,nextDexId) in
             DispatchQueue.main.async {

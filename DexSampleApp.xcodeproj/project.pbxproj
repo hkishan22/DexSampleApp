@@ -17,6 +17,42 @@
 		8412DDB9223C54E400D3930E /* HorizontalCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDB8223C54E400D3930E /* HorizontalCollectionDataSource.swift */; };
 		8412DDBF223C634C00D3930E /* CollectionCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDBE223C634C00D3930E /* CollectionCellDataSource.swift */; };
 		8412DDC2223C637C00D3930E /* SectionNavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDC1223C637C00D3930E /* SectionNavigationHandler.swift */; };
+		8412DDC5223C6C4900D3930E /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDC4223C6C4900D3930E /* WebViewViewModel.swift */; };
+		8412DDC6223C6F8100D3930E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156B223B8F470033A27F /* AppDelegate.swift */; };
+		8412DDC7223C6F8600D3930E /* CollectionCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDBE223C634C00D3930E /* CollectionCellDataSource.swift */; };
+		8412DDC8223C6F8900D3930E /* SectionNavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDC1223C637C00D3930E /* SectionNavigationHandler.swift */; };
+		8412DDC9223C6F9100D3930E /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156D223B8F470033A27F /* ExploreViewController.swift */; };
+		8412DDCA223C6F9100D3930E /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15BA223BE9F10033A27F /* WebViewViewController.swift */; };
+		8412DDCB223C6F9100D3930E /* DexUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15D5223C15C00033A27F /* DexUserViewController.swift */; };
+		8412DDCC223C6F9500D3930E /* CenteredCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15B8223BE8070033A27F /* CenteredCollectionViewFlowLayout.swift */; };
+		8412DDCD223C6F9900D3930E /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDA9223C212B00D3930E /* RoundImageView.swift */; };
+		8412DDCE223C6F9F00D3930E /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDB4223C3D9600D3930E /* HorizontalTableViewCell.swift */; };
+		8412DDCF223C6F9F00D3930E /* HorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8412DDB5223C3D9600D3930E /* HorizontalTableViewCell.xib */; };
+		8412DDD0223C6F9F00D3930E /* HorizontalCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDB8223C54E400D3930E /* HorizontalCollectionDataSource.swift */; };
+		8412DDD1223C6FA400D3930E /* DexCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15BF223BF2930033A27F /* DexCollectionViewCell.swift */; };
+		8412DDD2223C6FA400D3930E /* DexCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15C0223BF2930033A27F /* DexCollectionViewCell.xib */; };
+		8412DDD3223C6FAB00D3930E /* UserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15C3223BF5AD0033A27F /* UserCollectionViewCell.swift */; };
+		8412DDD4223C6FAB00D3930E /* UserCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15C4223BF5AD0033A27F /* UserCollectionViewCell.xib */; };
+		8412DDD5223C6FAB00D3930E /* DexUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15D9223C16240033A27F /* DexUserTableViewCell.swift */; };
+		8412DDD6223C6FAB00D3930E /* DexUserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15DA223C16240033A27F /* DexUserTableViewCell.xib */; };
+		8412DDD7223C6FAB00D3930E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAF223C37FA00D3930E /* UserView.swift */; };
+		8412DDD8223C6FAB00D3930E /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8412DDB0223C37FA00D3930E /* UserView.xib */; };
+		8412DDD9223C6FB000D3930E /* RequirementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15C7223BF5BC0033A27F /* RequirementCollectionViewCell.swift */; };
+		8412DDDA223C6FB000D3930E /* RequirementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15C8223BF5BC0033A27F /* RequirementCollectionViewCell.xib */; };
+		8412DDDB223C6FB500D3930E /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15B4223BE60C0033A27F /* BannerCollectionViewCell.swift */; };
+		8412DDDC223C6FB500D3930E /* BannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15B5223BE60C0033A27F /* BannerCollectionViewCell.xib */; };
+		8412DDDD223C6FBB00D3930E /* SectionTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15AF223BBFFC0033A27F /* SectionTitleTableViewCell.swift */; };
+		8412DDDE223C6FBB00D3930E /* SectionTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841B15B0223BBFFC0033A27F /* SectionTitleTableViewCell.xib */; };
+		8412DDDF223C6FC200D3930E /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B1597223BB9A30033A27F /* ExploreViewModel.swift */; };
+		8412DDE0223C6FC200D3930E /* DexUserVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15D7223C15E20033A27F /* DexUserVCViewModel.swift */; };
+		8412DDE1223C6FC200D3930E /* WebViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDC4223C6C4900D3930E /* WebViewViewModel.swift */; };
+		8412DDE2223C6FC800D3930E /* ExploreLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B1592223B97700033A27F /* ExploreLayout.swift */; };
+		8412DDE3223C6FC800D3930E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAB223C236400D3930E /* User.swift */; };
+		8412DDE4223C6FCE00D3930E /* ExploreServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B1594223BB1660033A27F /* ExploreServices.swift */; };
+		8412DDE5223C6FCE00D3930E /* DexUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAD223C25A200D3930E /* DexUsersService.swift */; };
+		8412DDE6223C6FD300D3930E /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B15BD223BED8A0033A27F /* NavigationHelper.swift */; };
+		8412DDE7223C6FD800D3930E /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B158C223B90410033A27F /* ApiManager.swift */; };
+		8412DDE8223C6FD800D3930E /* ServiceURl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B158E223B945F0033A27F /* ServiceURl.swift */; };
 		841B156C223B8F470033A27F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156B223B8F470033A27F /* AppDelegate.swift */; };
 		841B156E223B8F470033A27F /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156D223B8F470033A27F /* ExploreViewController.swift */; };
 		841B1571223B8F470033A27F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841B156F223B8F470033A27F /* Main.storyboard */; };
@@ -72,6 +108,7 @@
 		8412DDB8223C54E400D3930E /* HorizontalCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCollectionDataSource.swift; sourceTree = "<group>"; };
 		8412DDBE223C634C00D3930E /* CollectionCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCellDataSource.swift; sourceTree = "<group>"; };
 		8412DDC1223C637C00D3930E /* SectionNavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionNavigationHandler.swift; sourceTree = "<group>"; };
+		8412DDC4223C6C4900D3930E /* WebViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewModel.swift; sourceTree = "<group>"; };
 		841B1568223B8F470033A27F /* DexSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DexSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841B156B223B8F470033A27F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841B156D223B8F470033A27F /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -213,7 +250,6 @@
 				841B156B223B8F470033A27F /* AppDelegate.swift */,
 				8412DDBD223C62D100D3930E /* Protocol */,
 				841B159A223BBB6B0033A27F /* View */,
-				841B1599223BBB610033A27F /* Controller */,
 				841B1596223BB9820033A27F /* View Model */,
 				841B1591223B96830033A27F /* Model */,
 				841B1590223B965D0033A27F /* Service */,
@@ -268,6 +304,7 @@
 			children = (
 				841B1597223BB9A30033A27F /* ExploreViewModel.swift */,
 				841B15D7223C15E20033A27F /* DexUserVCViewModel.swift */,
+				8412DDC4223C6C4900D3930E /* WebViewViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -285,6 +322,7 @@
 		841B159A223BBB6B0033A27F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				841B1599223BBB610033A27F /* Controller */,
 				8412DDBC223C62C200D3930E /* Flow Layout */,
 				8412DDBB223C62AE00D3930E /* Sub Views */,
 				8412DDBA223C625900D3930E /* Cell */,
@@ -462,6 +500,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8412DDDE223C6FBB00D3930E /* SectionTitleTableViewCell.xib in Resources */,
+				8412DDDA223C6FB000D3930E /* RequirementCollectionViewCell.xib in Resources */,
+				8412DDD6223C6FAB00D3930E /* DexUserTableViewCell.xib in Resources */,
+				8412DDD4223C6FAB00D3930E /* UserCollectionViewCell.xib in Resources */,
+				8412DDD2223C6FA400D3930E /* DexCollectionViewCell.xib in Resources */,
+				8412DDCF223C6F9F00D3930E /* HorizontalTableViewCell.xib in Resources */,
+				8412DDDC223C6FB500D3930E /* BannerCollectionViewCell.xib in Resources */,
+				8412DDD8223C6FAB00D3930E /* UserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				841B15B1223BBFFC0033A27F /* SectionTitleTableViewCell.swift in Sources */,
+				8412DDC5223C6C4900D3930E /* WebViewViewModel.swift in Sources */,
 				841B15BE223BED8A0033A27F /* NavigationHelper.swift in Sources */,
 				841B1593223B97700033A27F /* ExploreLayout.swift in Sources */,
 				8412DDB6223C3D9600D3930E /* HorizontalTableViewCell.swift in Sources */,
@@ -566,7 +613,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8412DDCC223C6F9500D3930E /* CenteredCollectionViewFlowLayout.swift in Sources */,
+				8412DDE7223C6FD800D3930E /* ApiManager.swift in Sources */,
+				8412DDC8223C6F8900D3930E /* SectionNavigationHandler.swift in Sources */,
+				8412DDD1223C6FA400D3930E /* DexCollectionViewCell.swift in Sources */,
+				8412DDC6223C6F8100D3930E /* AppDelegate.swift in Sources */,
+				8412DDD5223C6FAB00D3930E /* DexUserTableViewCell.swift in Sources */,
+				8412DDC9223C6F9100D3930E /* ExploreViewController.swift in Sources */,
+				8412DDDD223C6FBB00D3930E /* SectionTitleTableViewCell.swift in Sources */,
+				8412DDE6223C6FD300D3930E /* NavigationHelper.swift in Sources */,
+				8412DDD9223C6FB000D3930E /* RequirementCollectionViewCell.swift in Sources */,
+				8412DDD0223C6F9F00D3930E /* HorizontalCollectionDataSource.swift in Sources */,
+				8412DDD7223C6FAB00D3930E /* UserView.swift in Sources */,
+				8412DDE1223C6FC200D3930E /* WebViewViewModel.swift in Sources */,
+				8412DDE2223C6FC800D3930E /* ExploreLayout.swift in Sources */,
+				8412DDCB223C6F9100D3930E /* DexUserViewController.swift in Sources */,
+				8412DDE8223C6FD800D3930E /* ServiceURl.swift in Sources */,
+				8412DDCE223C6F9F00D3930E /* HorizontalTableViewCell.swift in Sources */,
+				8412DDC7223C6F8600D3930E /* CollectionCellDataSource.swift in Sources */,
+				8412DDCA223C6F9100D3930E /* WebViewViewController.swift in Sources */,
 				841B1581223B8F490033A27F /* DexSampleAppTests.swift in Sources */,
+				8412DDCD223C6F9900D3930E /* RoundImageView.swift in Sources */,
+				8412DDE0223C6FC200D3930E /* DexUserVCViewModel.swift in Sources */,
+				8412DDE4223C6FCE00D3930E /* ExploreServices.swift in Sources */,
+				8412DDD3223C6FAB00D3930E /* UserCollectionViewCell.swift in Sources */,
+				8412DDE5223C6FCE00D3930E /* DexUsersService.swift in Sources */,
+				8412DDDF223C6FC200D3930E /* ExploreViewModel.swift in Sources */,
+				8412DDDB223C6FB500D3930E /* BannerCollectionViewCell.swift in Sources */,
+				8412DDE3223C6FC800D3930E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@ class HorizontalTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollec
             self.setCollectionViewFlowLayout()
         }
     }
+    
     var sectionNavHandler:SectionNavigationHandler?
     
     var collectionCellDataSource : HorizontalCollectionCellDataSource! {
@@ -76,7 +77,6 @@ class HorizontalTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return self.collectionCellDataSource?.minimumLineSpacingForSectionAt() ?? 0.0
     }
-    
 }
 
 

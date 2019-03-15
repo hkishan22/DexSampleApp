@@ -25,6 +25,14 @@ class ExploreViewModel: NSObject {
             //Handle Error Here
         }
     }
+    
+    func dexUserVCViewModelForSection(viewModel: DexSectionViewModel) -> DexUserVCViewModel {
+        return DexUserVCViewModel(dexID: viewModel.id)
+    }
+    
+    func webVCViewModel(viewModel: BannerSectionViewModel)->WebViewViewModel{
+        return WebViewViewModel(str_urlToLoad: viewModel.actionUrl, title: "Banner")
+    }
 }
 
 class LayoutViewModel {

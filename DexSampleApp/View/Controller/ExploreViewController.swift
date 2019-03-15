@@ -13,7 +13,7 @@ class ExploreViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel = ExploreViewModel()
+    private var viewModel = ExploreViewModel()
     
     
     override func viewDidLoad() {
@@ -130,12 +130,14 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
     // Function to handle Section Action
     func handleAction(sectionType:SectionType,sectionViewModel:SectionViewModel) {
         if sectionType == .Banner {
-            if let viewModel = sectionViewModel as? BannerSectionViewModel, let urlString = viewModel.actionUrl {
-                NavigationHelper.redirectToWebPageWIthURL(urlString: urlString, presentFrom: self,title:"Banner")
+            if let viewModel = sectionViewModel as? BannerSectionViewModel {
+                let webViewViewModel = self.viewModel.webVCViewModel(viewModel: viewModel)
+                NavigationHelper.redirectToWebPageWIthURL(webViewViewModel: webViewViewModel, presentFrom: self)
             }
         }else if sectionType == .Dex {
-            if let viewModel = sectionViewModel as? DexSectionViewModel, let dexID = viewModel.id {
-                NavigationHelper.redirectToDexUser(dexId: dexID, presentFrom: self, title: "Dex User")
+            if let viewModel = sectionViewModel as? DexSectionViewModel {
+                let dexViewModel = self.viewModel.dexUserVCViewModelForSection(viewModel: viewModel)
+                NavigationHelper.redirectToDexUser(dexViewModel: dexViewModel, presentFrom: self)
             }
         }
     }

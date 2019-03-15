@@ -12,22 +12,29 @@ import WebKit
 
 class WebViewViewController: UIViewController,UIWebViewDelegate,WKNavigationDelegate {
 
-    var webView = WKWebView()
-    var str_urlToLoad:String!
-    var activityIndicator = UIActivityIndicatorView(style: .gray)
-    var str_viewControllerTitle : String?
+    
+    static func webViewViewController(viewModel:WebViewViewModel)->WebViewViewController {
+        let webviewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebViewViewController") as! WebViewViewController
+        webviewVC.viewModel = viewModel
+        return webviewVC
+    }
+    
+    private var webView = WKWebView()
+    private var activityIndicator = UIActivityIndicatorView(style: .gray)
+    private var viewModel = WebViewViewModel(str_urlToLoad: nil, title: nil)
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.webView.navigationDelegate = self
         
-        if let url = URL(string: self.str_urlToLoad){
+        if let urlString =  self.viewModel.getUrl(), let url = URL(string: urlString){
             let request = URLRequest(url: url)
             self.webView.load(request)
             self.view = webView
         }
         self.showActivityIndicator()
-        self.title = self.str_viewControllerTitle
+        self.title = self.viewModel.getTitle()
     }
     
     
