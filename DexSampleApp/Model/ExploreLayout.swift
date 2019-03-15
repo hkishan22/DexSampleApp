@@ -30,28 +30,77 @@ class ExploreSection {
     var type: SectionType = .Unknown
     var sectionRefreshStatus : SectionRefreshStatus = .notLoading
     var entities = [Entities]()
+    var title = ""
     
-    init(withJson:[JSON]) {
+    init(with Json:JSON) {
         
+        if let title  = Json["title"].string {
+            self.title = title
+        }
+        
+        if let sectionType  = Json["sectionType"].string {
+            self.type = SectionType.init(rawValue: sectionType) ?? .Unknown
+        }
+        
+        if let entities  = Json["entities"].array {
+            for entity in entities {
+                switch self.type {
+                case .Banner:
+                    let ent = BannerEntities.init(with: entity)
+                    self.entities.append(ent)
+                case .Dex:
+                    let ent = DexEntites.init(with: entity)
+                    self.entities.append(ent)
+
+                case .Requirement:
+                    let ent = RequirementEntities.init(with: entity)
+                    self.entities.append(ent)
+
+                case .User:
+                    let ent = UserEntities.init(with: entity)
+                    self.entities.append(ent)
+
+                case .Unknown:
+                    break
+                }
+            }
+        }
     }
 }
 
 class Entities {
-
+    init(with Json:JSON) {
+    }
 }
 
 
-class  RequirementEntiries:Entities {
+class  RequirementEntities:Entities {
     var _id:                String?
     var name:               String?
     var slug:               String?
     var _dex:               DexEntites?
     var creator:            UserEntities?
+    
+    override init(with Json:JSON) {
+        super.init(with: Json)
+        self._id = Json["_id"].string
+        self.name = Json["name"].string
+        self.slug = Json["slug"].string
+        self._dex = DexEntites.init(with: Json["_dex"])
+        self.creator = UserEntities.init(with: Json["creator"])
+    }
 }
 
 class BannerEntities:Entities {
     var imageUrl:           String?
     var actionUrl:          String?
+  
+    override init(with Json:JSON) {
+        super.init(with: Json)
+        self.imageUrl = Json["imageUrl"].string
+        self.actionUrl = Json["actionUrl"].string
+    }
+
 }
 
 class DexEntites:Entities {
@@ -61,6 +110,16 @@ class DexEntites:Entities {
     var imageRatio:         Double?
     var imageUrl:           String?
     var userTermSlug:       String?
+    
+    override init(with Json:JSON) {
+        super.init(with: Json)
+        self._id = Json["_id"].string
+        self.name = Json["name"].string
+        self.userTerm = Json["userTerm"].string
+        self.imageUrl = Json["imageUrl"].string
+        self.userTermSlug = Json["userTermSlug"].string
+        self.imageRatio = Json["imageRatio"].double
+    }
 }
 
 class UserEntities:Entities {
@@ -70,5 +129,16 @@ class UserEntities:Entities {
     var handle:             String?
     var imageUrl:           String?
     var totalProjectClaps:  String?
+    
+    override init(with Json:JSON) {
+        super.init(with: Json)
+        self._id = Json["_id"].string
+        self.firstName = Json["firstName"].string
+        self.lastName = Json["lastName"].string
+        self.handle = Json["handle"].string
+        self.totalProjectClaps = Json["totalProjectClaps"].string
+        self.imageUrl = Json["imageUrl"].string
+    }
+
 }
 
