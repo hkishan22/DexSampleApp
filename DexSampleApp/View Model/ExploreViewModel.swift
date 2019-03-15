@@ -9,10 +9,6 @@
 import UIKit
 
 
-protocol SectionNavigationHandler{
-    func handleAction(sectionType:SectionType,sectionViewModel:SectionViewModel,title:String)
-}
-
 
 class ExploreViewModel: NSObject {
 
@@ -36,7 +32,7 @@ class LayoutViewModel {
     var sectionRefreshStatus : SectionRefreshStatus = .notLoading
     var sectionViewModels = [SectionViewModel]()
     var title = ""
-
+    
     init(section:ExploreSection) {
         self.title = section.title
         self.type = section.type
@@ -64,7 +60,6 @@ class LayoutViewModel {
             }
         }
     }
-    
 }
 
 class SectionViewModel {

@@ -11,9 +11,20 @@ import UIKit
 
 class HorizontalTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
-    var sectionLayout: ExploreSection?
+    var sectionLayoutVM: LayoutViewModel! {
+        didSet {
+            self.setCollectionViewFlowLayout()
+        }
+    }
     var sectionNavHandler:SectionNavigationHandler?
     
+    var collectionCellDataSource : HorizontalCollectionCellDataSource! {
+        didSet {
+            self.registerCell()
+            self.setCollectionViewFlowLayout()
+            self.horizontalCollectionView.reloadData()
+        }
+    }
     
     static func cellNib() -> UINib {
         let nib = UINib.init(nibName: "HorizontalTableViewCell", bundle: nil)
@@ -29,17 +40,16 @@ class HorizontalTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollec
         super.awakeFromNib()
         // Initialization code
         self.horizontalCollectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-        self.setCollectionViewFlowLayout()
-        self.registerCell()
     }
 
     func setCollectionViewFlowLayout(){
-    
+        self.collectionCellDataSource?.setFlowLayout(collectionView: self.horizontalCollectionView)
     }
     
     func registerCell(){
-        
+        self.collectionCellDataSource?.registerCell(collectionView: self.horizontalCollectionView)
     }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -47,33 +57,26 @@ class HorizontalTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sectionLayout?.entities.count ?? 0
+        return sectionLayoutVM?.sectionViewModels.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionViewCell.cellReuseIdentifier, for: indexPath) as! BannerCollectionViewCell
-        if let entity = self.sectionLayout?.entities[indexPath.item] as? BannerEntities, let urlString = entity.imageUrl  {
-            cell.imgv_bannerImage.sd_setImage(with: URL(string: urlString), placeholderImage: nil)
-        }
-        return cell
+       
+        return  self.collectionCellDataSource?.cell(collectionView: collectionView, viewModel: self.sectionLayoutVM!.sectionViewModels[indexPath.item], indexPath: indexPath) ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let entity = self.sectionLayout?.entities[indexPath.item] as? BannerEntities  {
-         //   self.sectionNavHandler?.handleAction(sectionType:.Banner,entity: entity, title: "Banner")
-        }
+        self.sectionNavHandler?.handleAction(sectionType: self.sectionLayoutVM!.type, sectionViewModel: self.sectionLayoutVM!.sectionViewModels[indexPath.item])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
+        return self.collectionCellDataSource?.sizeForItemAt(collectionView: collectionView) ?? CGSize.zero
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return self.collectionCellDataSource?.minimumLineSpacingForSectionAt() ?? 0.0
+    }
+    
 }
 
 
-protocol HorizontalCellDatatSource {
-    func registerCell(collectionView:UICollectionView)
-    func setFlowLayout(collectionView:UICollectionView)
-    func numberOfItems()->Int
-    func cell(indexPath: IndexPath)->UICollectionViewCell
-    func sizeForItemAt(indexPath: IndexPath)->CGSize
-}
