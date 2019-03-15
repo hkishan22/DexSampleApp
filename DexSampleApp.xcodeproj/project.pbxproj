@@ -15,6 +15,7 @@
 		841B1581223B8F490033A27F /* DexSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B1580223B8F490033A27F /* DexSampleAppTests.swift */; };
 		841B158D223B90410033A27F /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B158C223B90410033A27F /* ApiManager.swift */; };
 		841B158F223B945F0033A27F /* ServiceURl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B158E223B945F0033A27F /* ServiceURl.swift */; };
+		841B1593223B97700033A27F /* ExploreLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B1592223B97700033A27F /* ExploreLayout.swift */; };
 		8676527BEB2602775F400342 /* Pods_DexSampleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59905F4C207A53E5F6C36922 /* Pods_DexSampleAppTests.framework */; };
 		F403792FDBD06DA8A6EA1836 /* Pods_DexSampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0F6148169ABEEE36DC4FDEB /* Pods_DexSampleApp.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		841B1582223B8F490033A27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		841B158C223B90410033A27F /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		841B158E223B945F0033A27F /* ServiceURl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceURl.swift; sourceTree = "<group>"; };
+		841B1592223B97700033A27F /* ExploreLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreLayout.swift; sourceTree = "<group>"; };
 		9B9AA6F18235737F9DF9997D /* Pods-DexSampleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DexSampleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DexSampleAppTests/Pods-DexSampleAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		9D0916BD54594356DF7917F6 /* Pods-DexSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DexSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DexSampleApp/Pods-DexSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		B0F6148169ABEEE36DC4FDEB /* Pods_DexSampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DexSampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +106,8 @@
 			children = (
 				841B156B223B8F470033A27F /* AppDelegate.swift */,
 				841B156D223B8F470033A27F /* ViewController.swift */,
+				841B1591223B96830033A27F /* Model */,
+				841B1590223B965D0033A27F /* Service */,
 				841B158B223B902F0033A27F /* ApiManager */,
 				841B156F223B8F470033A27F /* Main.storyboard */,
 				841B1572223B8F480033A27F /* Assets.xcassets */,
@@ -129,6 +133,21 @@
 				841B158E223B945F0033A27F /* ServiceURl.swift */,
 			);
 			path = ApiManager;
+			sourceTree = "<group>";
+		};
+		841B1590223B965D0033A27F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		841B1591223B96830033A27F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				841B1592223B97700033A27F /* ExploreLayout.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		997F73E1FD686F2BCDD4F618 /* Pods */ = {
@@ -307,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841B1593223B97700033A27F /* ExploreLayout.swift in Sources */,
 				841B156E223B8F470033A27F /* ViewController.swift in Sources */,
 				841B158D223B90410033A27F /* ApiManager.swift in Sources */,
 				841B156C223B8F470033A27F /* AppDelegate.swift in Sources */,
