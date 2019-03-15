@@ -10,12 +10,8 @@ import UIKit
 
 class DexUserTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var lblFirstName:    UILabel!
-    @IBOutlet weak var lblLastName:     UILabel!
-    @IBOutlet weak var lblClapsCount:   UILabel!
-    @IBOutlet weak var imageViewUser:   RoundImageView!
+    @IBOutlet weak var userView:   UserView!
 
-    
     static func cellNib() -> UINib {
         let nib = UINib.init(nibName: "DexUserTableViewCell", bundle: nil)
         return nib

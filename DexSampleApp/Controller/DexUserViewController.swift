@@ -56,10 +56,10 @@ extension DexUserViewController:UITableViewDelegate,UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: DexUserTableViewCell.cellReuseIdentifier, for: indexPath) as! DexUserTableViewCell
         let userVM = self.viewModel.users[indexPath.row]
-        cell.lblFirstName.text = userVM.firstName
-        cell.lblLastName.text = userVM.lastName
-        cell.lblClapsCount.text =   (userVM.clapsCount != nil) ? "👏 " +  "\(userVM.clapsCount != nil)" : ""
-        cell.imageViewUser.sd_setImage(with: URL(string: userVM.imageUrl ?? ""), placeholderImage: nil)
+        cell.userView.lblFirstName.text = userVM.firstName
+        cell.userView.lblLastName.text = userVM.lastName
+        cell.userView.lblClapsCount.text =   (userVM.clapsCount != nil) ? "👏 " +  "\(userVM.clapsCount != nil)" : ""
+        cell.userView.imageViewUser.sd_setImage(with: URL(string: userVM.imageUrl ?? ""), placeholderImage: nil)
         return cell
     }
     

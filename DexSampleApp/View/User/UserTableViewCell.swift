@@ -52,10 +52,10 @@ class UserTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UserCollectionViewCell.cellReuseIdentifier, for: indexPath) as! UserCollectionViewCell
         if let entity = self.sectionLayout?.entities[indexPath.item] as? UserEntities  {
-            cell.lblFirstName.text = entity.firstName
-            cell.lblLastName.text = entity.lastName
-            cell.lblClapsCount.text =   (entity.totalProjectClaps != nil) ? "👏 " +  "\(entity.totalProjectClaps!)" : ""
-            cell.imageViewUser.sd_setImage(with: URL(string: entity.imageUrl ?? ""), placeholderImage: nil)
+            cell.userView.lblFirstName.text = entity.firstName
+            cell.userView.lblLastName.text = entity.lastName
+            cell.userView.lblClapsCount.text =   (entity.totalProjectClaps != nil) ? "👏 " +  "\(entity.totalProjectClaps!)" : ""
+            cell.userView.imageViewUser.sd_setImage(with: URL(string: entity.imageUrl ?? ""), placeholderImage: nil)
         }
         return cell
     }

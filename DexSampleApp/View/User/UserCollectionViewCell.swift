@@ -16,12 +16,9 @@ class UserCollectionViewCell: UICollectionViewCell {
     }
     
     static let cellReuseIdentifier = "UserCollectionViewCell"
+    @IBOutlet weak var userView:   UserView!
 
-    @IBOutlet weak var lblFirstName:    UILabel!
-    @IBOutlet weak var lblLastName:     UILabel!
-    @IBOutlet weak var lblClapsCount:   UILabel!
-    @IBOutlet weak var imageViewUser:   RoundImageView!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

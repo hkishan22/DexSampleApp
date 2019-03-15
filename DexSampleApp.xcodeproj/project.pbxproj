@@ -10,6 +10,8 @@
 		8412DDAA223C212B00D3930E /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDA9223C212B00D3930E /* RoundImageView.swift */; };
 		8412DDAC223C236400D3930E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAB223C236400D3930E /* User.swift */; };
 		8412DDAE223C25A200D3930E /* DexUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAD223C25A200D3930E /* DexUsersService.swift */; };
+		8412DDB1223C37FA00D3930E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAF223C37FA00D3930E /* UserView.swift */; };
+		8412DDB2223C37FA00D3930E /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8412DDB0223C37FA00D3930E /* UserView.xib */; };
 		841B156C223B8F470033A27F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156B223B8F470033A27F /* AppDelegate.swift */; };
 		841B156E223B8F470033A27F /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156D223B8F470033A27F /* ExploreViewController.swift */; };
 		841B1571223B8F470033A27F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841B156F223B8F470033A27F /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 		8412DDA9223C212B00D3930E /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		8412DDAB223C236400D3930E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8412DDAD223C25A200D3930E /* DexUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexUsersService.swift; sourceTree = "<group>"; };
+		8412DDAF223C37FA00D3930E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		8412DDB0223C37FA00D3930E /* UserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
 		841B1568223B8F470033A27F /* DexSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DexSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841B156B223B8F470033A27F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841B156D223B8F470033A27F /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 				841B15D9223C16240033A27F /* DexUserTableViewCell.swift */,
 				841B15DA223C16240033A27F /* DexUserTableViewCell.xib */,
 				8412DDA9223C212B00D3930E /* RoundImageView.swift */,
+				8412DDAF223C37FA00D3930E /* UserView.swift */,
+				8412DDB0223C37FA00D3930E /* UserView.xib */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 				841B15B7223BE60C0033A27F /* BannerCollectionViewCell.xib in Resources */,
 				841B15C2223BF2930033A27F /* DexCollectionViewCell.xib in Resources */,
 				841B15AA223BBF320033A27F /* BannerTableViewCell.xib in Resources */,
+				8412DDB2223C37FA00D3930E /* UserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +528,7 @@
 				8412DDAC223C236400D3930E /* User.swift in Sources */,
 				8412DDAE223C25A200D3930E /* DexUsersService.swift in Sources */,
 				841B158F223B945F0033A27F /* ServiceURl.swift in Sources */,
+				8412DDB1223C37FA00D3930E /* UserView.swift in Sources */,
 				841B15D8223C15E20033A27F /* DexUserVCViewModel.swift in Sources */,
 				841B1598223BB9A30033A27F /* ExploreViewModel.swift in Sources */,
 			);

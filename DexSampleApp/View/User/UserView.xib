@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserView" customModule="DexSampleApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="fpq-db-I96" id="0yT-8h-8oz"/>
+                <outlet property="imageViewUser" destination="z0a-02-3U7" id="B3L-Oh-6Uw"/>
+                <outlet property="lblClapsCount" destination="Lkb-8R-EeZ" id="5mg-x2-dOG"/>
+                <outlet property="lblFirstName" destination="CXV-fs-FJt" id="zla-4j-QpQ"/>
+                <outlet property="lblLastName" destination="Zjp-Ba-ugl" id="2nP-uU-S2U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fpq-db-I96">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjp-Ba-ugl">
+                    <rect key="frame" x="10" y="261" width="355" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="BhT-YD-YXE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXV-fs-FJt">
+                    <rect key="frame" x="10" y="240" width="355" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="MhA-PZ-h1H"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="KohinoorTelugu-Medium" family="Kohinoor Telugu" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👏 Claps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkb-8R-EeZ">
+                    <rect key="frame" x="10" y="287" width="355" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="dHO-vy-Bhd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z0a-02-3U7" customClass="RoundImageView" customModule="DexSampleApp" customModuleProvider="target">
+                    <rect key="frame" x="87.5" y="30" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="z0a-02-3U7" secondAttribute="height" multiplier="1:1" id="HoB-f5-FgA"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="z0a-02-3U7" firstAttribute="centerX" secondItem="kWT-uk-cbv" secondAttribute="centerX" id="5kF-Ma-Td8"/>
+                <constraint firstItem="Lkb-8R-EeZ" firstAttribute="leading" secondItem="kWT-uk-cbv" secondAttribute="leading" constant="10" id="AmH-3c-Lcm"/>
+                <constraint firstItem="Zjp-Ba-ugl" firstAttribute="top" secondItem="CXV-fs-FJt" secondAttribute="bottom" id="Kaa-o1-emv"/>
+                <constraint firstItem="Lkb-8R-EeZ" firstAttribute="top" secondItem="Zjp-Ba-ugl" secondAttribute="bottom" constant="5" id="Ud1-hV-1bU"/>
+                <constraint firstItem="Zjp-Ba-ugl" firstAttribute="leading" secondItem="kWT-uk-cbv" secondAttribute="leading" constant="10" id="Zwa-fJ-vKh"/>
+                <constraint firstItem="CXV-fs-FJt" firstAttribute="top" secondItem="z0a-02-3U7" secondAttribute="bottom" constant="10" id="aks-Ds-ADV"/>
+                <constraint firstItem="z0a-02-3U7" firstAttribute="top" secondItem="kWT-uk-cbv" secondAttribute="top" constant="10" id="dmb-Ms-YEH"/>
+                <constraint firstItem="z0a-02-3U7" firstAttribute="height" secondItem="fpq-db-I96" secondAttribute="height" multiplier="0.3" id="itx-W5-u6h"/>
+                <constraint firstItem="CXV-fs-FJt" firstAttribute="leading" secondItem="kWT-uk-cbv" secondAttribute="leading" constant="10" id="jLW-ef-1CY"/>
+                <constraint firstItem="kWT-uk-cbv" firstAttribute="trailing" secondItem="CXV-fs-FJt" secondAttribute="trailing" constant="10" id="qzT-Nw-IR8"/>
+                <constraint firstItem="kWT-uk-cbv" firstAttribute="trailing" secondItem="Lkb-8R-EeZ" secondAttribute="trailing" constant="10" id="yjc-6T-3m1"/>
+                <constraint firstItem="kWT-uk-cbv" firstAttribute="trailing" secondItem="Zjp-Ba-ugl" secondAttribute="trailing" constant="10" id="zZD-05-b2G"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="kWT-uk-cbv"/>
+            <point key="canvasLocation" x="492" y="-218"/>
+        </view>
+    </objects>
+</document>
