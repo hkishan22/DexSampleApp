@@ -10,8 +10,8 @@ import UIKit
 
 class RequirementTableViewCell: UITableViewCell,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
 
-    var sectionLayout: ExploreSection?
-    
+    var sectionLayoutVM: LayoutViewModel?
+
     
     static func cellNib() -> UINib {
         let nib = UINib.init(nibName: "RequirementTableViewCell", bundle: nil)
@@ -47,15 +47,13 @@ class RequirementTableViewCell: UITableViewCell,UICollectionViewDataSource,UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sectionLayout?.entities.count ?? 0
+        return sectionLayoutVM?.sectionViewModels.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RequirementCollectionViewCell.cellReuseIdentifier, for: indexPath) as! RequirementCollectionViewCell
-        if let entity = self.sectionLayout?.entities[indexPath.item] as? RequirementEntities  {
-            cell.lblRequirement.text = (entity._dex?.userTerm != nil) ? "\(entity._dex!.userTerm!) Required" : ""
-            cell.lblLocation.text = (entity.creator?.firstName != nil) ? "Anywhere in the world - by \(entity.creator!.firstName! + entity.creator!.lastName!)" : ""
-            cell.imageViewDexBG.sd_setImage(with: URL(string: entity._dex?.imageUrl ?? ""), placeholderImage: nil)
+        if let viewModel = self.sectionLayoutVM?.sectionViewModels[indexPath.item] as? RequirementSectionViewModel   {
+            cell.viewModel = viewModel
         }
         return cell
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class DexTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource {
 
-    var sectionLayout: ExploreSection?
+    var sectionLayoutVM: LayoutViewModel?
     var sectionNavHandler:SectionNavigationHandler?
 
     static func cellNib() -> UINib {
@@ -46,14 +46,13 @@ class DexTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sectionLayout?.entities.count ?? 0
+        return sectionLayoutVM?.sectionViewModels.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DexCollectionViewCell.cellReuseIdentifier, for: indexPath) as! DexCollectionViewCell
-        if let entities = self.sectionLayout?.entities, entities.count > indexPath.item, let entity = self.sectionLayout?.entities[indexPath.item] as? DexEntites{
-            cell.lblTitle.text = entity.userTerm
-            cell.imageViewDexBG.sd_setImage(with: URL(string: entity.imageUrl ?? ""), placeholderImage: nil)
+        if let sectionVM = self.sectionLayoutVM?.sectionViewModels, sectionVM.count > indexPath.item, let viewModel = sectionVM[indexPath.item] as? DexSectionViewModel{
+            cell.viewModel = viewModel
         }
         return cell
     }
@@ -67,8 +66,9 @@ class DexTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let entity = self.sectionLayout?.entities[indexPath.item] as? DexEntites  {
-            self.sectionNavHandler?.handleAction(sectionType:.Dex,entity: entity, title: "Dex")
+        
+        if let viewModel = self.sectionLayoutVM?.sectionViewModels[indexPath.item] as? DexSectionViewModel   {
+            self.sectionNavHandler?.handleAction(sectionType: self.sectionLayoutVM!.type, sectionViewModel: viewModel, title: "Dex")
         }
     }
 }

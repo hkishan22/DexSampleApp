@@ -40,7 +40,7 @@ class ExploreViewController: UIViewController {
 extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,SectionNavigationHandler {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.sectionLayouts.count
+        return viewModel.layoutViewModels.count
     }
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,34 +50,34 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let sectionLayout = self.viewModel.sectionLayouts[indexPath.section]
+        let sectionViewModel = self.viewModel.layoutViewModels[indexPath.section]
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: SectionTitleTableViewCell.cellReuseIdentifier, for: indexPath) as! SectionTitleTableViewCell
-            cell.lblTitle.text = sectionLayout.title
+            cell.lblTitle.text = sectionViewModel.title
             return cell
         }else{
-            switch sectionLayout.type {
+            switch sectionViewModel.type {
             case .Banner:
                 let cell = tableView.dequeueReusableCell(withIdentifier: BannerTableViewCell.cellReuseIdentifier, for: indexPath) as! BannerTableViewCell
                 cell.sectionNavHandler = self
-                cell.sectionLayout = sectionLayout
+                cell.sectionLayoutVM = sectionViewModel
                 return cell
 
             case .Dex:
                 let cell = tableView.dequeueReusableCell(withIdentifier: DexTableViewCell.cellReuseIdentifier, for: indexPath) as! DexTableViewCell
                 cell.sectionNavHandler = self
-                cell.sectionLayout = sectionLayout
+                cell.sectionLayoutVM = sectionViewModel
                 return cell
 
             case .Requirement:
                 let cell = tableView.dequeueReusableCell(withIdentifier: RequirementTableViewCell.cellReuseIdentifier, for: indexPath) as! RequirementTableViewCell
-                cell.sectionLayout = sectionLayout
+                cell.sectionLayoutVM = sectionViewModel
                 return cell
 
             case .User:
                 let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.cellReuseIdentifier, for: indexPath) as! UserTableViewCell
-                cell.sectionLayout = sectionLayout
+                cell.sectionLayoutVM = sectionViewModel
                 return cell
 
             case .Unknown:
@@ -93,7 +93,7 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 1 {
-            let sectionLayout = self.viewModel.sectionLayouts[indexPath.section]
+            let sectionLayout = self.viewModel.layoutViewModels[indexPath.section]
             switch sectionLayout.type {
             case .Requirement:
                 return UIScreen.main.bounds.width / 2.0
@@ -111,13 +111,13 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
     }
     
     // Function to handle Section Action
-    func handleAction(sectionType:SectionType,entity: Entities, title: String) {
+    func handleAction(sectionType:SectionType,sectionViewModel:SectionViewModel,title:String) {
         if sectionType == .Banner {
-            if let entity = entity as? BannerEntities, let urlString = entity.actionUrl {
+            if let viewModel = sectionViewModel as? BannerSectionViewModel, let urlString = viewModel.actionUrl {
                 NavigationHelper.redirectToWebPageWIthURL(urlString: urlString, presentFrom: self,title:title)
             }
         }else if sectionType == .Dex {
-            if let entity = entity as? DexEntites, let dexID = entity._id {
+            if let viewModel = sectionViewModel as? DexSectionViewModel, let dexID = viewModel.id {
                 NavigationHelper.redirectToDexUser(dexId: dexID, presentFrom: self, title: title)
             }
         }

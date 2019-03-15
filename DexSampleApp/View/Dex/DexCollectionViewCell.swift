@@ -21,6 +21,16 @@ class DexCollectionViewCell: UICollectionViewCell {
     
     static let cellReuseIdentifier = "DexCollectionViewCell"
 
+    
+    
+    var viewModel: DexSectionViewModel! {
+        didSet {
+            self.lblTitle.text = viewModel.title
+            self.imageViewDexBG.sd_setImage(with: URL(string: viewModel.imageUrl ?? ""), placeholderImage: nil)
+
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

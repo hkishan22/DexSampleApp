@@ -12,7 +12,6 @@ class SectionTitleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblTitle: UILabel!
     
-    
     static func cellNib() -> UINib {
         let nib = UINib.init(nibName: "SectionTitleTableViewCell", bundle: nil)
         return nib

@@ -7,15 +7,15 @@
 //
 
 import UIKit
-import SDWebImage
 
 
 
 class BannerTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
-    var sectionLayout: ExploreSection?
     var sectionNavHandler:SectionNavigationHandler?
+    var sectionLayoutVM: LayoutViewModel?
 
+    
 
     static func cellNib() -> UINib {
         let nib = UINib.init(nibName: "BannerTableViewCell", bundle: nil)
@@ -57,25 +57,24 @@ class BannerTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollection
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sectionLayout?.entities.count ?? 0
+        return sectionLayoutVM?.sectionViewModels.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCollectionViewCell.cellReuseIdentifier, for: indexPath) as! BannerCollectionViewCell
-        if let entity = self.sectionLayout?.entities[indexPath.item] as? BannerEntities, let urlString = entity.imageUrl  {
-            cell.imgv_bannerImage.sd_setImage(with: URL(string: urlString), placeholderImage: nil)
+        if let viewModel = self.sectionLayoutVM?.sectionViewModels[indexPath.item] as? BannerSectionViewModel   {
+            cell.viewModel = viewModel
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let entity = self.sectionLayout?.entities[indexPath.item] as? BannerEntities  {
-            self.sectionNavHandler?.handleAction(sectionType:.Banner,entity: entity, title: "Banner")
+        if let viewModel = self.sectionLayoutVM?.sectionViewModels[indexPath.item] as? BannerSectionViewModel   {
+            self.sectionNavHandler?.handleAction(sectionType: self.sectionLayoutVM!.type, sectionViewModel: viewModel, title: "Banner")
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
     }
-
 }

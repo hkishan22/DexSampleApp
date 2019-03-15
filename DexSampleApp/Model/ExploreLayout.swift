@@ -68,6 +68,7 @@ class ExploreSection {
     }
 }
 
+
 class Entities {
     init(with Json:JSON) {
     }

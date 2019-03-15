@@ -21,6 +21,14 @@ class RequirementCollectionViewCell: UICollectionViewCell {
     
     static let cellReuseIdentifier = "RequirementCollectionViewCell"
 
+    var viewModel: RequirementSectionViewModel! {
+        didSet {
+            self.lblRequirement.text = viewModel.requirementText
+            self.lblLocation.text = viewModel.locationText
+            self.imageViewDexBG.sd_setImage(with: URL(string: viewModel.imageUrl ?? ""), placeholderImage: nil)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

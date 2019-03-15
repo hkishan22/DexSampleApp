@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BannerCollectionViewCell: UICollectionViewCell {
 
@@ -19,6 +20,12 @@ class BannerCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imgv_bannerImage:UIImageView!
 
+    var viewModel: BannerSectionViewModel! {
+        didSet {
+            self.imgv_bannerImage.sd_setImage(with: URL(string: viewModel.imageUrl ?? ""), placeholderImage: nil)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

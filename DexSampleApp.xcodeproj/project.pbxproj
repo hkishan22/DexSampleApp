@@ -12,6 +12,8 @@
 		8412DDAE223C25A200D3930E /* DexUsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAD223C25A200D3930E /* DexUsersService.swift */; };
 		8412DDB1223C37FA00D3930E /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDAF223C37FA00D3930E /* UserView.swift */; };
 		8412DDB2223C37FA00D3930E /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8412DDB0223C37FA00D3930E /* UserView.xib */; };
+		8412DDB6223C3D9600D3930E /* HorizontalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412DDB4223C3D9600D3930E /* HorizontalTableViewCell.swift */; };
+		8412DDB7223C3D9600D3930E /* HorizontalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8412DDB5223C3D9600D3930E /* HorizontalTableViewCell.xib */; };
 		841B156C223B8F470033A27F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156B223B8F470033A27F /* AppDelegate.swift */; };
 		841B156E223B8F470033A27F /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841B156D223B8F470033A27F /* ExploreViewController.swift */; };
 		841B1571223B8F470033A27F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841B156F223B8F470033A27F /* Main.storyboard */; };
@@ -70,6 +72,8 @@
 		8412DDAD223C25A200D3930E /* DexUsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DexUsersService.swift; sourceTree = "<group>"; };
 		8412DDAF223C37FA00D3930E /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		8412DDB0223C37FA00D3930E /* UserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
+		8412DDB4223C3D9600D3930E /* HorizontalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTableViewCell.swift; sourceTree = "<group>"; };
+		8412DDB5223C3D9600D3930E /* HorizontalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalTableViewCell.xib; sourceTree = "<group>"; };
 		841B1568223B8F470033A27F /* DexSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DexSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		841B156B223B8F470033A27F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		841B156D223B8F470033A27F /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,15 @@
 				59905F4C207A53E5F6C36922 /* Pods_DexSampleAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8412DDB3223C3D7B00D3930E /* Horizontal Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8412DDB4223C3D9600D3930E /* HorizontalTableViewCell.swift */,
+				8412DDB5223C3D9600D3930E /* HorizontalTableViewCell.xib */,
+			);
+			path = "Horizontal Cell";
 			sourceTree = "<group>";
 		};
 		841B155F223B8F470033A27F = {
@@ -242,6 +255,7 @@
 		841B159A223BBB6B0033A27F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8412DDB3223C3D7B00D3930E /* Horizontal Cell */,
 				841B15B3223BC0010033A27F /* Section Title */,
 				841B15AE223BBF5A0033A27F /* Banner */,
 				841B15AD223BBF4B0033A27F /* Requirement */,
@@ -418,6 +432,7 @@
 				841B159E223BBEFA0033A27F /* DexTableViewCell.xib in Resources */,
 				841B1573223B8F480033A27F /* Assets.xcassets in Resources */,
 				841B15DC223C16240033A27F /* DexUserTableViewCell.xib in Resources */,
+				8412DDB7223C3D9600D3930E /* HorizontalTableViewCell.xib in Resources */,
 				841B1571223B8F470033A27F /* Main.storyboard in Resources */,
 				841B15A2223BBF0F0033A27F /* UserTableViewCell.xib in Resources */,
 				841B15CA223BF5BC0033A27F /* RequirementCollectionViewCell.xib in Resources */,
@@ -510,6 +525,7 @@
 				841B15A9223BBF320033A27F /* BannerTableViewCell.swift in Sources */,
 				841B1593223B97700033A27F /* ExploreLayout.swift in Sources */,
 				841B15A1223BBF0F0033A27F /* UserTableViewCell.swift in Sources */,
+				8412DDB6223C3D9600D3930E /* HorizontalTableViewCell.swift in Sources */,
 				841B15D6223C15C00033A27F /* DexUserViewController.swift in Sources */,
 				841B1595223BB1660033A27F /* ExploreServices.swift in Sources */,
 				841B15B6223BE60C0033A27F /* BannerCollectionViewCell.swift in Sources */,
