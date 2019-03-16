@@ -12,7 +12,6 @@ import WebKit
 
 class WebViewViewController: UIViewController,UIWebViewDelegate,WKNavigationDelegate {
 
-    
     static func webViewViewController(viewModel:WebViewViewModel)->WebViewViewController {
         let webviewVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WebViewViewController") as! WebViewViewController
         webviewVC.viewModel = viewModel
@@ -22,21 +21,20 @@ class WebViewViewController: UIViewController,UIWebViewDelegate,WKNavigationDele
     private var webView = WKWebView()
     private var activityIndicator = UIActivityIndicatorView(style: .gray)
     private var viewModel = WebViewViewModel(str_urlToLoad: nil, title: nil)
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.webView.navigationDelegate = self
-        
+
         if let urlString =  self.viewModel.getUrl(), let url = URL(string: urlString){
             let request = URLRequest(url: url)
             self.webView.load(request)
             self.view = webView
         }
+        
         self.showActivityIndicator()
         self.title = self.viewModel.getTitle()
     }
-    
     
     func showActivityIndicator(){
         self.activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -58,6 +56,4 @@ class WebViewViewController: UIViewController,UIWebViewDelegate,WKNavigationDele
     public func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
         self.hideActivityIndicator()
     }
-
-    
 }

@@ -12,20 +12,17 @@ import UIKit
 class ExploreViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
     private var viewModel = ExploreViewModel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.title = "explore"
         self.registerCells()
         self.viewModel.fetchSections {
             self.tableView.reloadData()
         }
     }
-    
     
     func registerCells(){
         self.tableView.register(HorizontalTableViewCell.cellNib(), forCellReuseIdentifier: HorizontalTableViewCell.cellReuseIdentifier)
@@ -41,7 +38,6 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
     }
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return 2
     }
     
@@ -61,49 +57,7 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource,Sectio
         cell.collectionCellDataSource = HorizontalCollectionCellDataSource.init(with: sectionViewModel.type)
         return cell
     }
-    
-    /*
-     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
-     let sectionViewModel = self.viewModel.layoutViewModels[indexPath.section]
-     
-     if indexPath.row == 0 {
-     let cell = tableView.dequeueReusableCell(withIdentifier: SectionTitleTableViewCell.cellReuseIdentifier, for: indexPath) as! SectionTitleTableViewCell
-     cell.lblTitle.text = sectionViewModel.title
-     return cell
-     }else{
-     
-     switch sectionViewModel.type {
-     case .Banner:
-     let cell = tableView.dequeueReusableCell(withIdentifier: BannerTableViewCell.cellReuseIdentifier, for: indexPath) as! BannerTableViewCell
-     cell.sectionNavHandler = self
-     cell.sectionLayoutVM = sectionViewModel
-     return cell
-     
-     case .Dex:
-     let cell = tableView.dequeueReusableCell(withIdentifier: DexTableViewCell.cellReuseIdentifier, for: indexPath) as! DexTableViewCell
-     cell.sectionNavHandler = self
-     cell.sectionLayoutVM = sectionViewModel
-     return cell
-     
-     case .Requirement:
-     let cell = tableView.dequeueReusableCell(withIdentifier: RequirementTableViewCell.cellReuseIdentifier, for: indexPath) as! RequirementTableViewCell
-     cell.sectionLayoutVM = sectionViewModel
-     return cell
-     
-     case .User:
-     let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.cellReuseIdentifier, for: indexPath) as! UserTableViewCell
-     cell.sectionLayoutVM = sectionViewModel
-     return cell
-     
-     case .Unknown:
-     break
-     }
-     }
-     return UITableViewCell()
-     }*/
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }

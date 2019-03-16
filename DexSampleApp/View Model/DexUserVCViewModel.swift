@@ -42,13 +42,13 @@ struct DexUserViewModel {
     var firstName: String?
     var lastName: String?
     var imageUrl: String?
-    var clapsCount: Int?
+    var clapsCountText: String?
 
     init(user:User) {
         self.firstName = user.firstName
         self.lastName = user.lastName
         self.imageUrl = user.imageUrl
-        self.clapsCount = user.totalProjectClaps
+        self.clapsCountText = (user.totalProjectClaps != nil) ? "👏 " +  "\(user.totalProjectClaps!)" : nil
     }
 }
 

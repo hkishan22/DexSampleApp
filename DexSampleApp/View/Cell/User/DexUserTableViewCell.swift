@@ -19,6 +19,15 @@ class DexUserTableViewCell: UITableViewCell {
     
     static let cellReuseIdentifier = "DexUserTableViewCell"
     
+    var viewModel : DexUserViewModel! {
+        didSet {
+            self.userView.lblFirstName.text = viewModel.firstName
+            self.userView.lblLastName.text = viewModel.lastName
+            self.userView.lblClapsCount.text =   (viewModel.clapsCountText != nil) ? "👏 " +  "\(viewModel.clapsCountText!)" : ""
+            self.userView.imageViewUser.sd_setImage(with: URL(string: viewModel.imageUrl ?? ""), placeholderImage: nil)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

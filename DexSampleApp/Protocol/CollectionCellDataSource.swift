@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// Protocol to populate Horizontal Table view Cell
 protocol CollectionCellDataSource  {
     func registerCell(collectionView:UICollectionView)
     func setFlowLayout(collectionView:UICollectionView)

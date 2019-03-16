@@ -25,7 +25,6 @@ class DexUsersService: NSObject {
                         for user in users {
                             userArray.append(User.init(with: user))
                         }
-                        
                         if var nextID = JsonResponse["next"].string, nextID != "False" {
                             nextID = nextID.replacingOccurrences(of: "?dexId=", with: "")
                             completion(userArray,nextID)

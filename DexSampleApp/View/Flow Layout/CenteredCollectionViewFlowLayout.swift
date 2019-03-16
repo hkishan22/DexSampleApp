@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Collection Flow Layout for Banner
 class CenteredCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     var mostRecentOffset : CGPoint = CGPoint()

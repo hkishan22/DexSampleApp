@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+// Class to add any New Section with Horizontal Scrolling
 class HorizontalCollectionCellDataSource: CollectionCellDataSource {
  
     private var sectionType: SectionType =  .Unknown

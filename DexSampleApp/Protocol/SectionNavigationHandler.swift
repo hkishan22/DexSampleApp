@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Protocol to handle Single Entity selection.
 protocol SectionNavigationHandler{
     func handleAction(sectionType:SectionType,sectionViewModel:SectionViewModel)
 }
