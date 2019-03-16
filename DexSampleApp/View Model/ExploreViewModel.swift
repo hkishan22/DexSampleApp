@@ -14,15 +14,15 @@ class ExploreViewModel: NSObject {
 
     var layoutViewModels = [LayoutViewModel]()
 
-    func fetchSections(completion:@escaping ()->()){
+    func fetchSections(completion:@escaping (Bool,String?)->()){
         let service = ExploreServices()
-        service.getAllSections(completion: { layouts in
-            self.layoutViewModels = layouts.map({return LayoutViewModel.init(section: $0)})
+        service.getAllSections(completion: {[weak self] layouts in
+            self?.layoutViewModels = layouts.map({return LayoutViewModel.init(section: $0)})
             DispatchQueue.main.async {
-                completion()
+                completion(true,nil)
             }
         }) { (error) in
-            //Handle Error Here
+            completion(false,error)
         }
     }
     

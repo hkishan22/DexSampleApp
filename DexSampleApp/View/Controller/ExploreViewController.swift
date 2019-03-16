@@ -19,8 +19,16 @@ class ExploreViewController: UIViewController {
         super.viewDidLoad()
         self.title = "explore"
         self.registerCells()
-        self.viewModel.fetchSections {
-            self.tableView.reloadData()
+        self.fetchSections()
+    }
+    
+    private func fetchSections(){
+        self.viewModel.fetchSections { [weak self](success,strError) in
+            if success {
+                self?.tableView.reloadData()
+            }else if let _ = strError {
+                //Show Error to user Here
+            }
         }
     }
     

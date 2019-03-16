@@ -18,7 +18,7 @@ class DexUserVCViewModel {
         self.nextDexId = dexID
     }
     
-    func fetchUsers( completion:@escaping ()->()){
+    func fetchUsers( completion:@escaping (Bool,String?)->()){
         guard let dexID = self.nextDexId else{
             return
         }
@@ -29,10 +29,11 @@ class DexUserVCViewModel {
                 self?.nextDexId = nextDexId
                 let arrUserVM = users.map({ return DexUserViewModel.init(user: $0)})
                 self?.users.append(contentsOf: arrUserVM)
-                completion()
+                completion(true,nil)
             }
         }) { (error) in
             //Handle Error Here
+            completion(false,error)
         }
     }
 }

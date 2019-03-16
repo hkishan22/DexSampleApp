@@ -29,8 +29,12 @@ class DexUserViewController: UIViewController {
     }
     
     private func fetchUsers(){
-        self.viewModel.fetchUsers() {
-            self.tableView.reloadData()
+        self.viewModel.fetchUsers() { [weak self](success,strError) in
+            if success {
+                self?.tableView.reloadData()
+            }else if let _ = strError {
+                //Show Error to user Here
+            }
         }
     }
     
