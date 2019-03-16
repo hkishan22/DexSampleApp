@@ -23,7 +23,7 @@ class DexUserTableViewCell: UITableViewCell {
         didSet {
             self.userView.lblFirstName.text = viewModel.firstName
             self.userView.lblLastName.text = viewModel.lastName
-            self.userView.lblClapsCount.text =   (viewModel.clapsCountText != nil) ? "👏 " +  "\(viewModel.clapsCountText!)" : ""
+            self.userView.lblClapsCount.text =  viewModel.clapsCountText
             self.userView.imageViewUser.sd_setImage(with: URL(string: viewModel.imageUrl ?? ""), placeholderImage: nil)
         }
     }
